@@ -18,12 +18,6 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
 
-      # Create backend test structure
-      - name: Setup backend test structure
-        run: |
-          mkdir -p backend-flask/tests
-          touch backend-flask/tests/__init__.py
-          mv backend-flask/test_app.py backend-flask/tests/
 
       # Create sonar properties
       - name: Create sonar properties
